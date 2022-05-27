@@ -26,7 +26,7 @@ async function main() {
 
         if (directory) {
             core.setOutput(fs.readdirSync("."), 'green');
-            process.chdir(directory)
+            process.chdir("bingo")
             core.saveState("directory", directory)
         }
 
