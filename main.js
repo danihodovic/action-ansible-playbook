@@ -24,6 +24,7 @@ async function main() {
         }
 
         if (directory) {
+            console.log(fs.readdirSync("."))
             process.chdir(directory)
             core.saveState("directory", directory)
         }
