@@ -5,6 +5,7 @@ const fs = require('fs')
 const os = require('os')
 
 async function main() {
+    core.setOutput("HELLO!!!!!!!!!!", 'green');
     try {
         const playbook = core.getInput("playbook", { required: true })
         const requirements = core.getInput("requirements")
