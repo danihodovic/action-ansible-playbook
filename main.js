@@ -5,7 +5,6 @@ const fs = require('fs')
 const os = require('os')
 
 async function main() {
-    core.setOutput("HELLO!!!!!!!!!!", 'green');
     try {
         const playbook = core.getInput("playbook", { required: true })
         const requirements = core.getInput("requirements")
@@ -25,7 +24,8 @@ async function main() {
         }
 
         if (directory) {
-            core.setOutput(fs.readdirSync("."), 'green');
+            core.setOutput("cwd: " + process.cwd());
+            core.setOutput("ls: " + fs.readdirSync("."));
             process.chdir("bingo")
             core.saveState("directory", directory)
         }
